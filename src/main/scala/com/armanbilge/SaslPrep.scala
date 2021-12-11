@@ -49,9 +49,6 @@ object SaslPrep {
    *   The string to canonicalise.
    * @return
    *   The canonicalised string.
-   * @throws [[IllegalArgumentException]]
-   *   if the string contained prohibited codepoints, or broke the requirements for
-   *   bidirectional character handling.
    * @see
    *   <a href="https://tools.ietf.org/html/rfc3454#section-7">RFC 3454, Section 7</a> for
    *   discussion of what a query string is.
@@ -69,9 +66,6 @@ object SaslPrep {
    *   The string to canonicalise.
    * @return
    *   The canonicalised string.
-   * @throws [[IllegalArgumentException]]
-   *   if the string contained prohibited codepoints, or broke the requirements for
-   *   bidirectional character handling.
    * @see
    *   <a href="https://tools.ietf.org/html/rfc3454#section-7">RFC 3454, Section 7</a> for
    *   discussion of what a stored string is.
