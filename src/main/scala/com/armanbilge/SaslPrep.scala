@@ -49,7 +49,7 @@ object SaslPrep {
    *   The string to canonicalise.
    * @return
    *   The canonicalised string.
-   * @throws java.lang.IllegalArgumentException
+   * @throws [[IllegalArgumentException]]
    *   if the string contained prohibited codepoints, or broke the requirements for
    *   bidirectional character handling.
    * @see
@@ -69,7 +69,7 @@ object SaslPrep {
    *   The string to canonicalise.
    * @return
    *   The canonicalised string.
-   * @throws java.lang.IllegalArgumentException
+   * @throws [[IllegalArgumentException]]
    *   if the string contained prohibited codepoints, or broke the requirements for
    *   bidirectional character handling.
    * @see
