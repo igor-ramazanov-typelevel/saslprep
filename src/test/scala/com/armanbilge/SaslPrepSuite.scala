@@ -68,10 +68,8 @@ class SaslPrepSuite extends FunSuite {
   test("unassigned") {
     val unassignedCodepoint = (Character.MIN_CODE_POINT to Character.MAX_CODE_POINT)
       .reverse
-      .filterNot(codepoint =>
-        !Character.isDefined(codepoint)
-          && !SaslPrep.prohibited(codepoint))
-      .head
+      .find(codepoint => !Character.isDefined(codepoint) && !SaslPrep.prohibited(codepoint))
+      .get
     val withUnassignedChar = "abc" + new String(Character.toChars(unassignedCodepoint))
     assertEquals(withUnassignedChar, saslPrepQuery(withUnassignedChar))
     interceptMessage[IllegalArgumentException]("Character at position 3 is unassigned")(
