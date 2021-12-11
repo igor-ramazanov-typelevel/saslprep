@@ -139,8 +139,6 @@ object SaslPrep {
           "First character is RandALCat, but last character is not"
         )
       }
-
-      i += 1
     }
     if (containsRandALCat && containsLCat) {
       throw new IllegalArgumentException(
