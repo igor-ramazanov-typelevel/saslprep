@@ -1,2 +1,2 @@
 # saslprep
-saslprep for Scala.js
+saslprep for Scala.js and Scala Native
