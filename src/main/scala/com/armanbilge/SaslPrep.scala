@@ -33,7 +33,8 @@
 
 package com.armanbilge
 
-import scala.scalajs.js
+import java.nio.CharBuffer
+import java.text.Normalizer
 
 /**
  * https://github.com/mongodb/mongosql-auth-java/blob/master/src/main/java/org/mongodb/mongosql/auth/plugin/SaslPrep.java
@@ -97,10 +98,8 @@ object SaslPrep {
     }
 
     // 2. Normalize
-    val normalized = new String(chars, 0, length)
-      .asInstanceOf[js.Dynamic]
-      .normalize("NFKC")
-      .asInstanceOf[String]
+    val normalized =
+      Normalizer.normalize(CharBuffer.wrap(chars, 0, length), Normalizer.Form.NFKC)
 
     var containsRandALCat = false
     var containsLCat = false
