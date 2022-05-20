@@ -28,3 +28,6 @@ lazy val saslprep = crossProject(JVMPlatform, JSPlatform, NativePlatform)
       "org.scalameta" %%% "munit" % "1.0.0-M4" % Test
     )
   )
+  .platformsSettings(JVMPlatform, NativePlatform)(
+    tlVersionIntroduced := List("2.12", "2.13", "3").map(_ -> "0.1.1").toMap
+  )
